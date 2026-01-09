@@ -11,9 +11,10 @@ html {
 }
 
 :root {
-    --primaria: #4f46e5;
+    --primaria: #f8f7fcff;
     --secundaria: #7c3aed;
-    --escuro: #0f172a;
+    --escuro: #094efcda;
+    --azulEscuro: #032887da;
     --maisEscuro: #0a0f1c;
     --claro: #e2e8f0;
     --vidro: rgba(255, 255, 255, 0.1);
@@ -21,14 +22,14 @@ html {
 
 body {
    background-color: var(--escuro);
-   color: var(--claro);
+   /* color: var(--claro); */
    overflow-x: hidden;
 }
 
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: var(--azulEscuro);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
@@ -127,6 +128,14 @@ h1 {
     text-align: center;
     max-width: 95%; 
     margin: 0 auto; 
+    color:  rgba(253, 253, 253, 1);
+}
+
+.tech {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  min-height: 100vh;       /* altura da tela */
 }
 
 .projetos {
@@ -157,6 +166,8 @@ h1 {
    text-align: center;
    font-size: 2.5rem;
    margin-bottom: 50px;
+   color: var(--primaria);
+   
 }
 
 .projetos-card:hover {
@@ -176,17 +187,45 @@ h1 {
 
 
 .caixa-textos-projeto {
-    padding: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+  text-align: center;
+  gap: 16px;
+}
+
+.tecnologias img {
+  max-width: 100%;
+}
+
+.btn-projeto {
+  padding: 12px 24px;
+  background-color: #ff6b00;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-projeto:hover {
+  background-color: #e55f00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 
 .paragrafo-projetos {
-   color: rgba(266, 232, 240, 0.8);
+   /* color: rgba(266, 232, 240, 0.8); */
+   color: var(--primaria);
+   font-weight: bold;
    line-height: 1.25rem;
 }
 
 .info-projetos {
    margin-bottom: 5px;
+   color: var(--primaria);
 }
 
 .contatos {
@@ -201,6 +240,7 @@ h1 {
    text-align: center;
    font-size: 2.5rem;
    margin-bottom: 50px;
+   color: var(--primaria);
 }
 
 .formulario-contato {
@@ -235,13 +275,14 @@ h1 {
 }
 
 .botao-form {
-    color: var(--claro);
-    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    color: var(--primaria);
+    background: linear-gradient(45deg, var(--escuro), var(--escuro));
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 15px;
     width: 100%;
     transition: all 0.5 ease;
 }
@@ -261,9 +302,9 @@ h1 {
      z-index: -1;
      opacity: 0.5;
      background: 
-     radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-     var(--maisEscuro);
+     /* radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%), */
+     var(--maisEscuro); 
 }
 
 .cabecalho a {
@@ -353,6 +394,7 @@ margin-top: 38px;
 
  .projetos-titulo {
    font-size: 2.0rem;
+
 }
 
 .contatos-titulo {
